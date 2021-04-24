@@ -38,7 +38,7 @@ Once you ran the flask server, you can access to swagger server through the foll
 - http://127.0.0.1:5000/	(Swagger)
 
 
-### Concept
+#### Concept
 
 `GET`:  */concept/search_keyword_with_pagination/{keyword}/{page_num}/{limit}*
 
@@ -55,7 +55,7 @@ Once you ran the flask server, you can access to swagger server through the foll
 		- Pagination with `page_num` and `limit` from url parameters.
 		- Search with `keyword` and `target_column` from url parameters. where `target_column` is the column you want to search for the `keyword`.
 	
-### Person
+#### Person
 `GET`:  */person/by_ethnicity*
 	-	Provide information about the number of person by ethnicity group.
 
@@ -71,7 +71,7 @@ Once you ran the flask server, you can access to swagger server through the foll
 `GET`:  */person/total*
 	-	Provide information about the total number of person in the person database table.
 
-###  Visit
+####  Visit
 `GET`:  */visit/visit_by_age*
 	-	Provide information about the number of visit-occurrence by age group (10 years)
 
