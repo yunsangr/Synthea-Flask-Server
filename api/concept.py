@@ -20,7 +20,6 @@ class search_keyword_with_pagination(Resource):
 
     @staticmethod
     def get(keyword, page_num, limit):
-        print(keyword, page_num, limit)
         return ConceptTable.search_keyword_with_pagination(
             db=db,
             keyword=keyword,

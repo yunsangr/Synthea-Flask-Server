@@ -15,6 +15,7 @@ Mako==1.1.4
 MarkupSafe==1.1.1
 numpy==1.20.2
 pandas==1.2.4
+psycopg2==2.8.6
 PyPika==0.48.1
 pyrsistent==0.17.3
 python-dateutil==2.8.1

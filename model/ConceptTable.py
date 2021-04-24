@@ -4,34 +4,23 @@ class ConceptTable():
 
     @staticmethod
     def get_all(db):
-        print("ConceptTable::get_all")
         dataframe = db.execute(concept_table_all)
-        print(dataframe)
         return dataframe.to_json()
 
     @staticmethod
     def get_by_page(db, page_num, limit):
-        print("ConceptTable::get_by_page page: {page_num} limit: {limit}"
-              .format(page_num=page_num, limit=limit))
         query = concept_table_pagination_query.format(offset=page_num * limit, limit=limit)
         dataframe = db.execute(query)
-        print(dataframe)
         return dataframe.to_json()
 
     @staticmethod
     def search_keyword(db, keyword):
-        print("ConceptTable::search_keyword")
         query = concept_table_keyword_search.format(keyword=keyword)
-        print(query)
         df = db.execute(query)
-        # print(concept_table_pagination_query)
-        print(df)
         return df.to_json()
 
     @staticmethod
     def search_keyword_with_pagination(db, keyword, page_num, limit):
-        print("search_keyword_with_pagination")
-        print(keyword, page_num, limit)
         query = concept_table_keyword_search_with_pagination.format(keyword=keyword, offset=page_num, limit=limit)
         df = db.execute(query)
         return df.to_json()
@@ -110,7 +99,6 @@ class ConceptTable():
         db.execute(joined_table_query)
         db.execute(search_keyword_from_joined_table_query)
         df = db.execute(paginated_result_query)
-        print(df)
         if df is None:
             return "No matching result."
         return df.to_json()

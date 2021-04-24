@@ -16,8 +16,6 @@ class DataBase():
         try:
             return pd.read_sql(query, self.engine)
         except Exception:
-            # print(Exception)
-            # print("Failed to execute the following query:\n {}".format(query))
             return
 
     def make_url(self, user, password, host, port, db):
