@@ -37,6 +37,7 @@ $ python app.py
 Once you ran the flask server, you can access to swagger server through the following url:
 - http://127.0.0.1:5000/	(Swagger)
 
+
 ### Concept
 
 `GET`:  */concept/search_keyword_with_pagination/{keyword}/{page_num}/{limit}*
@@ -55,12 +56,37 @@ Once you ran the flask server, you can access to swagger server through the foll
 		- Search with `keyword` and `target_column` from url parameters. where `target_column` is the column you want to search for the `keyword`.
 	
 ### Person
-`GET`:  */visit/visit_by_age*
-	-	Provide
+`GET`:  */person/by_ethnicity*
+	-	Provide information about the number of person by ethnicity group.
+
+`GET`:  */person/by_gender*
+	-	Provide information about the number of person by gender group.
+
+`GET`:  */person/by_race*
+	-	Provide information about the number of person by race group.
+
+`GET`:  */person/death*
+	-	Provide information about the number of dead.
+
+`GET`:  */person/total*
+	-	Provide information about the total number of person in the person database table.
 
 ###  Visit
 `GET`:  */visit/visit_by_age*
 	-	Provide information about the number of visit-occurrence by age group (10 years)
-	-
+
+`GET`:  */visit/visit_by_ethnicity_concept_id*
+	-	Provide information about the number of visit-occurrence by ethnicity group.
+
+`GET`:  */visit/visit_by_gender_concept*
+	-	Provide information about the number of visit-occurrence by gender group.
+
+`GET`:  */visit/visit_by_race_concept_id*
+	-	Provide information about the number of visit-occurrence by race group.
+
+`GET`:  */visit/visit_concept_id*
+	-	Provide information about the number of visit-occurrence by the type of visit.
+
+> For more defails about APIs,  refer to the Swagger service.
 
 
