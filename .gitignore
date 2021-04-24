@@ -1,0 +1,7 @@
+.idea/
+APIs.py
+__pycache__/
+unused/
+venv
+
+*/__pycache__/
