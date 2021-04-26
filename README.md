@@ -22,10 +22,10 @@ Go to `src/database.py` , then you will see the following codes.
 class DataBase():  
     def __init__(self):  			# Put your PostgreSQL information here.
         host = "host"            		# ex) 12.34.56.78
-		user = "user"  			# ex) userName
-		password = "password"  		# ex) userPassword
-		database = "database"  		# ex) databaseName
-		self.engine = self.connect(user, password, database, host)
+	user = "user"  				# ex) userName
+	password = "password"  			# ex) userPassword
+	database = "database"  			# ex) databaseName
+	self.engine = self.connect(user, password, database, host)
 ```
 
 ## How to run
